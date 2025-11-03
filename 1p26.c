@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+    float a,b,c,s;
 
 
  int validity(float a,float b,float c)
@@ -20,32 +21,34 @@
 }
  void perameter( float a,float b,float c)
         {
-            float s;
+
             s=(a+b+c)/2;
-            printf("perimeter is :%f",s);
+            printf("\n perimeter is :%f",s);
         }
-void area( float a,float b,float c)
+void area( float a,float b,float c,float s)
         {
-            float s,v;
-            v=sqrt(s(s-a)*(s-b)*(s-c));
-            printf("area is :%f",v);
+            float v=0;
+            v=sqrt(s*(s-a)*(s-b)*(s-c));
+            printf("\n area is : %f ",v);
         }
 
 
 
 void main()
 {
-    float a,b,c;
+
       printf("enter the three side of triangle : ");
-    scanf("\n%f",&a);
-    scanf("\n%f",&b);
-    scanf("\n%f",&c);
+    scanf("%f",&a);
+    scanf("%f",&b);
+    scanf("%f",&c);
 
     if(validity(a,b,c))
     {
         perameter(a,b,c);
+        area(a,b,c,s);
 
     }
 
 }
+
 
